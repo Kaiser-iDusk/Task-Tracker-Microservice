@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:17-alpine
+    ports:
+      - "5000:5432"
+    restart: always
+    environment:
+      # change in prod
+      POSTGRES_DB: db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
